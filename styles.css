@@ -1,30 +1,111 @@
 * {
-    background-color: white
+    font-family: Ubuntu, sans-serif;
 }
 
-.container {
-    border: 1px solid black;
-    padding: 1px;
-    margin: 1px;
+.grid-container {
     display: grid;
-    grid-template-columns: 250px 1fr;
-    grid-template-rows: 60px 40px;
+    grid-template-columns: 240px 1fr;
+    grid-template-rows: 120px 1fr 50px;
     grid-template-areas: 
     'sidebar header'
-    'sidebar main';
+    'sidebar main'
+    'sidebar footer';
+    height:100vh;
 }
 
-.header {
+.header-container {
+    padding: 10px;
     grid-area: header;
-    border: 1px solid pink;
+    background-color: #DDF6D2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 50px;
+    grid-template-areas: 
+    'search alert'
+    'intro buttons';
+}
+
+.search {
+    grid-area: search;
+    justify-content: center;
+}
+
+.glass {
+    margin-top: 5px;
+}
+
+input {
+    width: 30em;
+    border-radius: 10px;
+    background-color: rgb(207, 215, 215);
+}
+
+.alert {
+    grid-area: alert;
+    grid-column-end: 3;
+}
+
+.intro {
+    grid-area: intro;
+}
+
+.buttons {
+    grid-area: buttons;
+    justify-items: center;
 }
 
 .sidebar {
     grid-area: sidebar;
-    border: 1px solid green;
+    background-color: #B0DB9C;
 }
 
 .main {
     grid-area: main;
-    border: 1px solid red;
+    background-color: #CAE8BD;
 }
+
+.footer {
+    grid-area: footer;
+    background-color: #DDF6D2;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: black;
+    margin: 15px;
+}
+
+.icons:hover {
+    color: darkblue;
+}
+
+.blocky {
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.theBlocks {
+    margin-top: 30px;
+}
+
+.dash {
+    padding-left: 20px;
+    padding-bottom: 20px;;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.personal {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    
+}
+
+.tech {
+    padding-left: 20px;
+}
+
