@@ -15,44 +15,66 @@
 
 .header-container {
     padding: 10px;
+    grid-gap: 10px;
     grid-area: header;
     background-color: #DDF6D2;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px 50px;
+    grid-template-columns: 1fr 5fr 2fr 2fr 2fr;
+    grid-template-rows: 2fr 2fr;
     grid-template-areas: 
-    'search alert'
-    'intro buttons';
-}
-
-.search {
-    grid-area: search;
-    justify-content: center;
+    'glass search bell profile-pic name'
+    'big-pic intro new upload share';
 }
 
 .glass {
-    margin-top: 5px;
+    display: grid;
+    justify-self: end;
+    align-self: center;
+}
+
+.search {
+    display: grid;
+    align-self: center;
 }
 
 input {
-    width: 30em;
-    border-radius: 10px;
-    background-color: rgb(207, 215, 215);
+    border-radius: 15px;
+    background-color: #B0DB9C;
 }
 
-.alert {
-    grid-area: alert;
-    grid-column-end: 3;
+.bell {
+    display: grid;
+    align-self: center;
+    justify-self: end;
+}
+
+.profile-pic {
+    display: grd;
+    align-self: center;
+    justify-self:center;
+}
+
+.name {
+    display: grid;
+    align-self: center;
+    justify-self: start;
+}
+
+.big-pic {
+    display: grid;
+    align-self: start;
+    justify-self: center;
 }
 
 .intro {
-    grid-area: intro;
+    font-size: 13px;
 }
 
-.buttons {
-    grid-area: buttons;
-    justify-items: center;
-}
+button {
+    height: 40px;
+    border-radius: 20px;
+    font-size: 16px;
+}   
 
 .sidebar {
     grid-area: sidebar;
